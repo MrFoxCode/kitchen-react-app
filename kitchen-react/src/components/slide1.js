@@ -1,6 +1,10 @@
 import React from "react";
 
 function Slides(){
+
+    const bankofImages = [];
+
+
     return(
         //whole container for all divs to be inside
     <div className="container-slides">
@@ -18,14 +22,16 @@ function Slides(){
         
         {/*section with all the clickable images that are going to lead to the recipe*/}
         <div className="slidesOne">
-            <a id="image1"><img src=""></img></a>
-            <a id="image2"><img src=""></img></a>
-            <a id="image3"><img src=""></img></a>
+            <a id="images-slide"><img src={bankofImages}></img></a>        
         </div>
-        
+
         {/*little circles under the slide to show the number of the image being displayed*/}
-        <div className="circles">        
+        <div className="circles">
+            <div className="circle1"></div>
+            <div className="circle2"></div>
+            <div className="circle3"></div>                       
         </div>
+
     </div>
         
     )

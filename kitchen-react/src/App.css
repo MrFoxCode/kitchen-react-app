@@ -27,7 +27,7 @@
 }
 
 .searchbutton:active, .searchbar button:active {
-  background-color: #4e4e4e;
+  background-color: silver;
 }
 
 .searchbutton img, .searchbar button img {
@@ -58,8 +58,9 @@
   color: white;
 }
 
+/*ARROW BUTTON ON SLIDE SECTION*/
 .arrow-slide-button, .container-slides .arrow1, .container-slides .arrow2 {
-  background: rgba(43, 43, 43, 0.8);
+  background: rgba(54, 54, 54, 0.8);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -101,6 +102,35 @@
           transform: rotate(45deg);
 }
 
+/*circles scroll in the bottom*/
+.circles-section, .container-slides .circles {
+  width: 150px;
+  height: 30px;
+}
+
+.circles-section .c1, .container-slides .circles .c1, .container-slides .circles .circle1, .container-slides .circles .circle2, .container-slides .circles .circle3 {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: solid;
+  border-width: 0.15em;
+  border-color: white;
+}
+
+.circles-section .c1:hover, .container-slides .circles .c1:hover, .container-slides .circles .circle1:hover, .container-slides .circles .circle2:hover, .container-slides .circles .circle3:hover {
+  cursor: pointer;
+  background-color: white;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.circles-section .c1:active, .container-slides .circles .c1:active, .container-slides .circles .circle1:active, .container-slides .circles .circle2:active, .container-slides .circles .circle3:active {
+  border-color: #bbbbbb;
+  background: #bbbbbb;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
 .container-slides {
   background-color: #8d8d8d;
   background-repeat: no-repeat;
@@ -112,6 +142,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container-slides .arrow1 {
@@ -148,6 +181,25 @@
 
 .container-slides .arrow2:active {
   background: silver;
+}
+
+.container-slides .circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  bottom: -45%;
+}
+
+.container-slides .circles .circle1, .container-slides .circles .circle2, .container-slides .circles .circle3 {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
 }
 
 .navbar {
@@ -299,7 +351,7 @@
 }
 
 .all-containers .see-all-recipes {
-  top: 80px;
+  top: 11%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

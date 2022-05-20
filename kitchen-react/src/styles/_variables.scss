@@ -1,6 +1,8 @@
 $navbarcolor: rgb(226, 226, 226);
 $cursorhover: rgb(99, 99, 99);
 $textcolor: rgb(29, 29, 29);
+$activebuttoncolor: rgb(192, 192, 192);
+$arrowbuttoncolor: rgba(54, 54, 54, 0.8);
 
 @mixin flexCenter {
     display: flex;
@@ -28,7 +30,7 @@ $textcolor: rgb(29, 29, 29);
     &:hover{
         background-color: rgb(163, 163, 163);            
     }&:active{
-        background-color: rgb(78, 78, 78);    
+        background-color: $activebuttoncolor;   
     }
     img{                        
         width: 12px;
@@ -53,8 +55,11 @@ $textcolor: rgb(29, 29, 29);
     color: white;
 }
 
+
+/*ARROW BUTTON ON SLIDE SECTION*/
+
 .arrow-slide-button{
- background:rgba(43, 43, 43, 0.8);
+ background:$arrowbuttoncolor;
  width: 60px;
  height: 60px;
  border-radius: 50%;
@@ -79,5 +84,30 @@ $textcolor: rgb(29, 29, 29);
     height: 7px;
     background: white;
     transform: rotate(45deg);
+    }
+}
+
+/*circles scroll in the bottom*/
+
+.circles-section{
+    width: 150px;
+    height: 30px;
+    .c1{
+     width: 18px;
+     height: 18px;
+     border-radius: 50%;
+     border: solid;
+     border-width: 0.15em;
+     border-color: rgba(255, 255, 255, 1);
+     &:hover{
+        cursor: pointer;
+        background-color: white;
+        transition-duration: 0.4s;
+        }&:active{
+            border-color:rgba(187, 187, 187, 1);
+            background: rgba(187, 187, 187, 1);
+            transition-duration: 0.1s;
+        }
+
     }
 }
