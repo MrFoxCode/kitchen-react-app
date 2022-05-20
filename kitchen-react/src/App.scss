@@ -5,6 +5,10 @@
 @import "./styles/_footer.scss";
 
 
+html, body{
+    overflow-x: hidden;
+}
+
 body{
     min-height: 100vh;
     background-color: rgb(209, 209, 209);    

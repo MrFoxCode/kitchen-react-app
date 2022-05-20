@@ -33,6 +33,7 @@ $textcolor: rgb(29, 29, 29);
     img{                        
         width: 12px;
         height: 12px;
+        -webkit-user-drag: none;
     }        
 }
 
@@ -50,6 +51,33 @@ $textcolor: rgb(29, 29, 29);
     padding-bottom: 0.4em;
     background-color: rgb(110, 110, 103);
     color: white;
-    
+}
 
+.arrow-slide-button{
+ background:rgba(43, 43, 43, 0.8);
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+ @include flexCenter();
+ flex-direction: column;
+ padding-right: 0.5em;
+ padding-left: 0.2em;
+
+/*arrows inside the button*/ 
+    .rectangle-inside1{
+    border-radius: 2em;
+    width: 25px;
+    height: 7px;
+    background: white;
+    transform: rotate(-45deg);
+    margin-bottom: 0.4em;
+    }
+ 
+    .rectangle-inside2{
+    border-radius: 2em;
+    width: 25px;
+    height: 7px;
+    background: white;
+    transform: rotate(45deg);
+    }
 }

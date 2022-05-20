@@ -33,6 +33,7 @@
 .searchbutton img, .searchbar button img {
   width: 12px;
   height: 12px;
+  -webkit-user-drag: none;
 }
 
 .button1, .recipe button {
@@ -57,12 +58,96 @@
   color: white;
 }
 
-.slidesOne {
+.arrow-slide-button, .container-slides .arrow1, .container-slides .arrow2 {
+  background: rgba(43, 43, 43, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 0.5em;
+  padding-left: 0.2em;
+  /*arrows inside the button*/
+}
+
+.arrow-slide-button .rectangle-inside1, .container-slides .arrow1 .rectangle-inside1, .container-slides .arrow2 .rectangle-inside1, .container-slides .arrow1 .rectangle1, .container-slides .arrow2 .rectangle1 {
+  border-radius: 2em;
+  width: 25px;
+  height: 7px;
+  background: white;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-bottom: 0.4em;
+}
+
+.arrow-slide-button .rectangle-inside2, .container-slides .arrow1 .rectangle-inside2, .container-slides .arrow2 .rectangle-inside2, .container-slides .arrow1 .rectangle2, .container-slides .arrow2 .rectangle2 {
+  border-radius: 2em;
+  width: 25px;
+  height: 7px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container-slides {
   background-color: #8d8d8d;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
-  height: 80vh;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-slides .arrow1 {
+  position: absolute;
+  left: 15px;
+}
+
+.container-slides .arrow1:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.container-slides .arrow1:active {
+  background: silver;
+}
+
+.container-slides .arrow2 {
+  position: absolute;
+  right: 15px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container-slides .arrow2:hover {
+  -webkit-transform: scale(1.1) rotate(180deg);
+          transform: scale(1.1) rotate(180deg);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.container-slides .arrow2:active {
+  background: silver;
 }
 
 .navbar {
@@ -175,7 +260,7 @@
   /*Get the button from Variables.scss files*/
 }
 
-.recipes {
+.all-containers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,17 +271,50 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
 }
 
-.recipes a {
+.all-containers .recipes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: 500;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.all-containers .recipes a {
   text-decoration: none;
   color: black;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.all-containers .see-all-recipes {
+  top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.all-containers .see-all-recipes a {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.all-containers .see-all-recipes:hover {
+  text-decoration: underline;
 }
 
 /*Recipe Pattern style*/
@@ -222,8 +340,6 @@
   border-radius: 0.5em;
   width: 250px;
   height: 300px;
-  margin-left: 2em;
-  margin-right: 2em;
 }
 
 .recipe button {
@@ -267,6 +383,10 @@
 .content-inside {
   color: white;
   font-size: 12px;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {

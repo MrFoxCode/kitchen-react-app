@@ -1,5 +1,6 @@
 import React from "react";
 
+//each recipe inside the div recipes in recipes.js
 function RecipesAll(props){
     return(    
     <div className="recipe">
