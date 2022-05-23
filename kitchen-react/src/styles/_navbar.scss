@@ -19,6 +19,8 @@
         letter-spacing: 2px;      
         font-weight: 700;
         font-size: 14px;
+        color: $textcolor;
+        text-decoration: none;
         text-transform: uppercase;
         cursor: pointer;
         &:hover{
@@ -79,3 +81,4 @@
     }
 
 }
+

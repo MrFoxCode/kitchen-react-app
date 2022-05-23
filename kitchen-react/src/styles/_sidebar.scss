@@ -1,0 +1,25 @@
+.side-bar{
+    background-color: rgba(39, 39, 39, 0.8);
+    top: 0;
+    z-index: 1;
+    
+    /*TURN IT BACK TO FLEX*/
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    
+    .close-sidebar{
+      
+      margin: 10px;
+      @extend .close-x;
+      .line1{
+          @extend .line-x1;
+          transform: rotate(45deg);
+      }
+      .line2{
+          @extend .line-x1;
+          transform: rotate(-45deg);
+      }
+    }
+}

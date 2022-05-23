@@ -14,12 +14,12 @@ function Navbar(){
         <div className="navbar">
             
             <ul>
-                <li><a id="nav-home">Home</a></li>
-                <li><a id="nav-about">About</a></li>
-                <li><a id="nav-recipes">Recipes</a></li>
-                <li><a id="nav-yourlist">Your List</a></li>
+                <li><a href = "" id="nav-home">Home</a></li>
+                <li><a href = "" id="nav-about">About</a></li>
+                <li><a href = "" id="nav-recipes">Recipes</a></li>
+                <li><a href = "" id="nav-yourlist">Your List</a></li>
             </ul>
-
+            {/*Burger on left side, when clicked a side bar scrolls to the view*/}
             <div className="burgerbar">
                 <a id="burger1"></a>
                 <a id="burger2"></a>

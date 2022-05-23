@@ -36,7 +36,7 @@
   -webkit-user-drag: none;
 }
 
-.button1, .recipe button {
+.button1, .recipe button, .about-container .about-text-content a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,6 +129,46 @@
   background: #bbbbbb;
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
+}
+
+/*CLOSE BUTTON AT SIDE-BAR*/
+.close-x, .side-bar .close-sidebar {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #747474;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.close-x .line-x1, .side-bar .close-sidebar .line-x1, .side-bar .close-sidebar .line1, .side-bar .close-sidebar .line2 {
+  position: absolute;
+  border-radius: 2em;
+  background-color: white;
+  width: 4px;
+  height: 25px;
+}
+
+.close-x:hover, .side-bar .close-sidebar:hover {
+  cursor: pointer;
+  background-color: #575757;
+}
+
+.close-x:active, .side-bar .close-sidebar:active {
+  background-color: silver;
 }
 
 .container-slides {
@@ -235,6 +275,8 @@
   letter-spacing: 2px;
   font-weight: 700;
   font-size: 14px;
+  color: #1d1d1d;
+  text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -435,6 +477,99 @@
 .content-inside {
   color: white;
   font-size: 12px;
+}
+
+.about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 120vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url("/src/images/kitchen_bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("/src/images/kitchen_bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-container .about-text-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.about-container .about-text-content h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.about-container .about-text-content p {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.about-container .about-text-content a {
+  width: 400px;
+  height: 70px;
+  background-color: rgba(95, 95, 95, 0.5);
+  margin-top: 80px;
+  color: white;
+  font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+.about-container .about-text-content a:hover {
+  background-color: rgba(63, 63, 63, 0.5);
+}
+
+.about-container .about-text-content a:active {
+  background-color: rgba(110, 110, 110, 0.5);
+}
+
+.side-bar {
+  background-color: rgba(39, 39, 39, 0.8);
+  top: 0;
+  z-index: 1;
+  /*TURN IT BACK TO FLEX*/
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 400px;
+}
+
+.side-bar .close-sidebar {
+  margin: 10px;
+}
+
+.side-bar .close-sidebar .line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.side-bar .close-sidebar .line2 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 html, body {

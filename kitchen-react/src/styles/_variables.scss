@@ -111,3 +111,25 @@ $arrowbuttoncolor: rgba(54, 54, 54, 0.8);
 
     }
 }
+/*CLOSE BUTTON AT SIDE-BAR*/
+.close-x{
+    flex-direction: column;
+    align-items: center;
+    @include flexCenter();
+    background: rgba(116, 116, 116, 1);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;    
+    .line-x1{
+        position: absolute;
+        border-radius: 2em;
+        background-color: white;
+        width: 4px;
+        height: 25px;
+    }&:hover{
+        cursor: pointer;
+        background-color: rgb(87, 87, 87);
+    }&:active{
+        background-color: $activebuttoncolor;
+    }
+}
