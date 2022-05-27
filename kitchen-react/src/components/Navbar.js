@@ -1,17 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import Searchlogo from "../images/searchicon.png";
+
 
 
 function Navbar(){
 
-     //Click function in Searhbar
+//------------------------------
+//         FUNCTIONS 
+//------------------------------    
+
+    //Click function in Searhbar
      const searchButton = () =>{
         console.log("clicked");
         document.getElementById('searchinput').value ="";   
        };
-    
+
+
+    //active side-bar function (Vanilla JS)
+    const burgerActive = ()=>{
+        let sidebar = document.getElementById('sidebarid');
+        sidebar.classList.add('bar-active');
+    };
+
+
+//----------------------------------
+//             JSX
+//----------------------------------
+
+    //everything that gonna be displayed
     return(
-        <div className="navbar">
+        <div className="navbar">            
             
             <ul>
                 <li><a href = "" id="nav-home">Home</a></li>
@@ -20,7 +38,7 @@ function Navbar(){
                 <li><a href = "" id="nav-yourlist">Your List</a></li>
             </ul>
             {/*Burger on left side, when clicked a side bar scrolls to the view*/}
-            <div className="burgerbar">
+            <div onClick={burgerActive} className="burgerbar">
                 <a id="burger1"></a>
                 <a id="burger2"></a>
                 <a id="burger3"></a>            
@@ -30,6 +48,7 @@ function Navbar(){
                 <input type="text" id="searchinput" placeholder="Search"></input>
                 <button onClick={searchButton} type="submit"> <img src={Searchlogo}/></button>           
             </div>
+
         </div>
         
     );   

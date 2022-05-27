@@ -1,25 +1,61 @@
 .side-bar{
-    background-color: rgba(39, 39, 39, 0.8);
+    background-color: rgba(59, 59, 59, 0.9);
     top: 0;
     z-index: 1;
+    flex-direction: column;
+    display: flex;
     
     /*TURN IT BACK TO FLEX*/
-    display: none;
     position: fixed;
     height: 100%;
-    width: 400px;
-    
+    width: 400px; 
+    left: -100%;
+    transition-duration: 0.4s;    
+
     .close-sidebar{
-      
       margin: 10px;
       @extend .close-x;
-      .line1{
+        .line1{
           @extend .line-x1;
           transform: rotate(45deg);
-      }
-      .line2{
+        }
+        .line2{
           @extend .line-x1;
           transform: rotate(-45deg);
-      }
+        }
     }
+
+    .bar-links{
+        @include flexCenter();
+        height: 400px;
+        h3{
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        li{
+            @extend .button1;
+            border-radius: 1em;
+            text-decoration: none;
+            list-style: none;
+            height: 50px;
+            width: 380px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            &:hover{
+                cursor: pointer;
+                background-color: rgb(102, 102, 102);
+            }
+            a{
+                color: white;
+                font-size: 25px;
+            }
+        }
+        
+       
+    }
+}
+
+.bar-active{
+    left: 0;
 }
