@@ -2,6 +2,10 @@
     @include flexCenter();
     flex-direction: column;
     height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url("/src/images/recipes_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     .recipes{
         @include flexCenter();
@@ -10,7 +14,7 @@
             color: black;
             margin-left: 2em;
             margin-right: 2em;
-        }
+        }    
     }
     
     .see-all-recipes{
@@ -21,39 +25,47 @@
             font-weight: 500;
             font-size: 20px;
             text-decoration: none;        
-            color: black;
+            color: white;
         }&:hover{
          text-decoration: underline;   
         }
     }
 
 }
-
-
 /*Recipe Pattern style*/
-.recipe{
+
+.recipe{ 
     @include flexCenter();
     flex-direction: column;
-    justify-content: end;
-    background: rgba(145, 145, 145, 0.8);
+    justify-content: end;       
+    
+    /*background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));*/
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 0.5em;
     width: 250px;
-    height: 300px;    
+    height: 300px;         
     button{
         @extend .button1;
-        margin-bottom: 40px;            
-    }
-    &:hover{
+        margin-bottom: 40px;
         cursor: pointer;
-        transform: scale(1.1);
-        transition-duration: 0.4s;
-        /*idea is to shows the recipe image*/
-        background-color: rgb(199, 45, 45);        
+        background-color: rgba(77, 77, 77, 0.5);            
     }
+    &:hover{        
+        cursor: pointer;        
+        transform: scale(1.1);
+        transition-duration: 0.4s;               
+        /*idea is to shows the recipe image zooming in*/        
+    }
+    
     h1{
         font-size: 25px;
+        color: white;
     }
     p{
+        color: white;
         font-size: 15px;
         margin-bottom: 20px;
     }
