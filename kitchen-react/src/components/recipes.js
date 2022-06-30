@@ -12,14 +12,14 @@ function RecipesMain(){
     <div className="all-containers">
         
         <div className="recipes">
-           <a href=""> <RecipesAll image = {pancakeImg} name="Category 1" about="about recipe1" /> </a>
-           <a href=""> <RecipesAll image = {cakeImg} name="Category 2" about="about recipe2" /> </a>
-           <a href=""> <RecipesAll image = {burgerImg} name="Category 3" about="about recipe3" /> </a>
-           <a href=""> <RecipesAll image = {drinkImg} name="Category 4" about="about recipe4" /> </a>            
+           <a href=""> <RecipesAll image = {pancakeImg} name="Pancakes" about="and other Breakfast ideas." /> </a>
+           <a href=""> <RecipesAll image = {cakeImg} name="Cakes" about="desserts, cakes and other concepts." /> </a>
+           <a href=""> <RecipesAll image = {burgerImg} name="Lunch" about="burger, fast food and other meals." /> </a>
+           <a href=""> <RecipesAll image = {drinkImg} name="Drinks" about="alcoholic, healthy and others." /> </a>            
         </div>
 
         <div className="see-all-recipes">
-            <a href = "" alt="see all recipes">See all Recipes</a>
+            <a href = "" alt="see all recipes"><button>See all Recipes</button></a>
         </div>
 
     </div>

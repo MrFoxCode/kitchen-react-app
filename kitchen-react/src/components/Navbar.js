@@ -29,7 +29,9 @@ function Navbar(){
 
     //everything that gonna be displayed
     return(
-        <div className="navbar">            
+        <div className="navbar">
+            
+            {/*<a id="logo-title"><h1>The Kitchen</h1></a>*/}         
             
             <ul>
                 <li><a href = "" id="nav-home">Home</a></li>

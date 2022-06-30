@@ -13,7 +13,7 @@ function RecipesAll(props){
     };
 
     function changeBG(e){
-       // e.target.style.backgroundSize = '280px';   
+        e.target.style.backgroundSize = '280px';   
         e.target.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.1)), url(${props.image})`
     };
 
@@ -29,7 +29,7 @@ function RecipesAll(props){
     <div className="recipe" style={recipeBG} onMouseEnter={changeBG} onMouseLeave={changeBGOut}>       
     <h1>{props.name}</h1>
     <p>{props.about}</p>
-    <button alt='See Recipe'>See Recipe</button> 
+    <button alt='See Recipes'>See Recipe</button> 
     </div>
     );
 }
